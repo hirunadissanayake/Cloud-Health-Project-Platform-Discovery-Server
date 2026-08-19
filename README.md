@@ -58,5 +58,5 @@ For peer-aware Google Cloud deployment, provide `EUREKA_DEFAULT_ZONE` and enable
 | Property | Value |
 |---|---|
 | Student | Hiruna Dissanayake |
-| Student number | `TODO` |
+| Student number | `24171104` |
 | GCP project | `cloud-health-506015-hiruna` |
