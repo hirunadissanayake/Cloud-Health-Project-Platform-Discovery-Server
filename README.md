@@ -1,4 +1,4 @@
-# Discovery-Server
+# Service-Registry
 
 A Netflix Eureka service registry used by the API Gateway and all Cloud Health domain microservices.
 
@@ -23,6 +23,7 @@ This project is part of the Cloud Health Project for ITS 2130 Enterprise Cloud A
 | Property | Value |
 |---|---|
 | Port | `8761` |
+| Eureka application name | `service-registry` |
 | Artifact ID | `discovery-server` |
 | Group ID | `com.cloudhealth` |
 | Config Server | `http://localhost:8888` |
@@ -36,7 +37,7 @@ This project is part of the Cloud Health Project for ITS 2130 Enterprise Cloud A
 Startup order:
 
 1. Config Server (`8888`)
-2. **Discovery-Server** (`8761`)
+2. **Service-Registry** (`8761`)
 3. API Gateway and domain services
 
 ```bash
@@ -45,7 +46,7 @@ Startup order:
 
 Open `http://localhost:8761` to inspect registered services.
 
-For peer-aware Google Cloud deployment, provide `EUREKA_DEFAULT_ZONE` and enable `EUREKA_REGISTER_WITH_EUREKA` and `EUREKA_FETCH_REGISTRY`.
+For peer-aware Google Cloud deployment, provide a comma-separated `EUREKA_DEFAULT_ZONE` containing the registry peers and enable `EUREKA_REGISTER_WITH_EUREKA` and `EUREKA_FETCH_REGISTRY`. The service then appears as `SERVICE-REGISTRY` on the Eureka dashboard.
 
 ## Testing
 
